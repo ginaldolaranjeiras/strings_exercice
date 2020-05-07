@@ -46,11 +46,16 @@ def isVowel(wordvowel):
 
 #Define a função que obtêm uma data específica
 def dateInput(dateinput):
-    date = datetime.strptime(dateinput, '%d/%m/%Y').date()
-    print("""Dia: {}
+    try:
+        date = datetime.strptime(dateinput, '%d/%m/%Y').date()
+        print("""Dia: {}
 Mês: {}
 Ano: {}
 """.format(date.day, date.month, date.year))
+
+    except:
+        print("""Parece que há  algo de errado com a sua entrada.
+Por favor, verifique se o valor está no formato dd/mm/aaaa ou se o valor {} é uma data válida.""".format(dateinput))
     
 
 #CHAMAMENTO DAS FUNÇÕES DO PROGRAMA
