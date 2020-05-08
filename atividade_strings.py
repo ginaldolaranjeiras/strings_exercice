@@ -54,8 +54,10 @@ Ano: {}
 """.format(date.day, date.month, date.year))
 
     except:
-        print("""Parece que há  algo de errado com a sua entrada.
-Por favor, verifique se o valor está no formato dd/mm/aaaa ou se o valor {} é uma data válida.""".format(dateinput))
+        print("""Parece que há  algo de errado com a sua entrada!
+Por favor, verifique se o valor está no formato dd/mm/aaaa
+ou se o valor {} é uma data válida.""".format(dateinput))
+        dateInput(input("Digite uma data específica: "))
     
 
 #CHAMAMENTO DAS FUNÇÕES DO PROGRAMA
